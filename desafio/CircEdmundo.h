@@ -1,22 +1,15 @@
-#ifndef CircEdmundo_H
-#define CircEdmundo_H
+#ifndef CIRCEDMUNDO_H  
+#define CIRCEDMUNDO_H
+
 #include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
 
-typedef struct circ_list TCircList;
+typedef struct circular Sorteio;
 
-TCircList* TCircList_create();
-
-bool TCircList_insert_begin(TCircList* list, int info);
-
-bool TCircList_insert_end(TCircList* list, int info);
-
-void TCircList_print(TCircList*);
-
-int TCircList_remove(TCircList* list, int soldado);
-
-
-
-
+Sorteio* list_create();                // Cria uma nova lista circular
+bool insert_begin(Sorteio*, int);       // Insere no início
+void print(Sorteio*);                   // Imprime a lista
+bool List_remove(Sorteio*, int);        // Remove um elemento da lista
+int list_size(Sorteio* lista);          //Retorna o tamanho da lista
+int get_soldado_at(Sorteio* list, int pos);  //Retorna o soldado da posição desejada
 #endif
+
