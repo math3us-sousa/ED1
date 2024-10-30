@@ -1,19 +1,15 @@
-#ifndef TDLINKED_LIST_H
-#define TDLINKED_LIST_H
-
+#ifndef TDLINKEDLIST_H
+#define TDLINKEDLIST_H
 #include <stdbool.h>
 
-typedef struct _tdlinked_list TDLinkedList;
+typedef struct _tdlink TDLinkedList;
 
-bool TDLinkedList_insert_end(TDLinkedList*, int);
+TDLinkedList* list_create();
+bool insert_end(TDLinkedList*, int);
+void print(TDLinkedList*);
+bool insert_ordem(TDLinkedList*, int);
 
-bool TDLinkedList_insert_begin(TDLinkedList*, int);
 
-TDLinkedList* TDLinkedList_Create();
-
-void TDLinkedList_print(TDLinkedList*);
-
-void TDLinkedList_print_reverse(TDLinkedList*);
 
 
 #endif
