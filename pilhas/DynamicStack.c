@@ -66,6 +66,7 @@ void destroy(Stack* stack){
 // Verifica se a pilha está vazia
 int empty(Stack* stack){
     return stack->qty == 0;
+    // ou return stack->inicio == NULL;
 }
 // Retorna a quantidade de elementos empilhados
 int qty(Stack* stack){
