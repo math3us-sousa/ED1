@@ -3,7 +3,7 @@
 #include <string.h>
 
 int main(){
-  char[1024]
+  char string[1024];
   fgets(string,1024,stdin);
   puts(string);
   Stack* stack = create();
