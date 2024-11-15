@@ -11,7 +11,8 @@ void destroy(Stack*);
 int full(Stack*);
 int empty(Stack*);
 int qty(Stack*);
-
+int remover_carro(Stack*, Stack*, int);//para Edcarlos
+void print_stack(Stack*);
 
 
 #endif
