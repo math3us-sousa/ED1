@@ -76,3 +76,20 @@ int qty(Stack* stack){
 int full(Stack* stack){
     return 0;
 }
+void print_stack(Stack* stack) {
+    int item;
+    Stack* aux = create();
+    // Move os itens da pilha original para a auxiliar
+    while (!empty(stack)) {
+        pop(stack, &item);
+        push(aux, item); // Copia para auxiliar
+    }
+    // Imprime os itens e restaura a pilha original
+    while (!empty(aux)) {
+        pop(aux, &item);
+        printf("%d ", item); // Imprime o item
+        push(stack, item);   // Restaura o item para a pilha original
+    }
+    putchar('\n');
+    destroy(aux); // Libera a memória da pilha auxiliar
+}
